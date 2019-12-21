@@ -11,14 +11,14 @@
   
   
   
-  <title>Hexo</title>
+  <title>Study</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
+<meta property="og:title" content="Study">
 <meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:site_name" content="Study">
 <meta property="og:locale" content="en_US">
-<meta property="article:author" content="John Doe">
+<meta property="article:author" content="Dxes">
 <meta name="twitter:card" content="summary">
   
   
@@ -38,11 +38,12 @@
       <header id="masthead" class="site-header" role="banner">
     <hgroup>
       <h1 class="site-title">
-        <a href="/" title="Hexo" rel="home">Hexo</a>
+        <a href="/" title="Study" rel="home">Study</a>
       </h1>
       
-        <h2 class="site-description hitokoto"></h2>
-        <script type="text/javascript" src="https://v1.hitokoto.cn/?encode=js"></script>
+        <h2 class="site-description">
+          <a href="/" id="subtitle">Live and learn</a>
+        </h2>
       
     </hgroup>
 
@@ -473,7 +474,7 @@
 </li>
 <li><p>在github上创建一个空的仓库，仓库名： <code>用户名.github.io</code>  </p>
 </li>
-<li><p>修改博客本地仓库中的配置文件（Hexo目录下的_config.yml文件）,在文件末尾添加一下选中内容<br><img src="/Users/yuting/Desktop/Files/Hexo/image1.png" alt="">  </p>
+<li><p>修改博客本地仓库中的配置文件（Hexo目录下的_config.yml文件）,在文件末尾添加一下选中内容</p>
 </li>
 <li><p>使用git部署, 输入指令<code>npm install hexo-deployer-git --save</code>  </p>
 </li>
@@ -611,7 +612,7 @@
 
     <div class="entry-content">
       
-        <h1 id="Linux定时任务"><a href="#Linux定时任务" class="headerlink" title="Linux定时任务"></a>Linux定时任务</h1><p>通过制定 ```crontab -e``编辑和开启定时任务</p>
+        <h1 id="Linux定时任务"><a href="#Linux定时任务" class="headerlink" title="Linux定时任务"></a>Linux定时任务</h1><p>通过制定 <code>crontab -e</code>编辑和开启定时任务</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 创建一个完整的定时任务，需要确定时间和任务</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 1.时间</span></span><br><span class="line"> .---------------- minute (0 - 59)   # 分</span><br><span class="line"> |  .------------- hour (0 - 23)     # 时</span><br><span class="line"> |  |  .---------- day of month (1 - 31)  # 日</span><br><span class="line"> |  |  |  .------- month (1 - 12) OR jan,feb,mar,apr ...  # 月</span><br><span class="line"> |  |  |  |  .---- day of week (0 - 6) (Sunday=0 or 7) OR sun,mon,tue,wed,thu,fri,sat</span><br><span class="line"> |  |  |  |  |</span><br><span class="line"> *  *  *  *  * user-name  command to be executed</span><br><span class="line"> </span><br><span class="line"> * * * * *   		- 每分钟执行一次任务(每隔一分钟)</span><br><span class="line"> */1 * * * *        - 每分钟执行一次任务(每隔一分钟)</span><br><span class="line"> */2 * * * *        - 每2分钟执行一次任务(每隔2分钟)</span><br><span class="line"> * */1 * * *        - 每隔1小时</span><br><span class="line"> * * */1 * *        - 每隔1天</span><br><span class="line"> * * * */2 *        - 每隔两个月</span><br><span class="line"> * * * *  fri       - 每周五执行任务</span><br><span class="line"> </span><br><span class="line"> 30 * * * *         - 时间点到30分的时候做</span><br><span class="line"> 0  * * * *         - 时间点到整点的时候执行任务</span><br><span class="line"> 30 2 * * *         - 时间到 02:30 的时候执行任务</span><br><span class="line"> 0  12 28 * *       - 每月28号12:00执行任务</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="meta">#</span><span class="bash"> 2.任务</span></span><br><span class="line">写Linux指令, 指令如果有结果，结果看不到</span><br></pre></td></tr></table></figure>
 
 
@@ -1095,7 +1096,7 @@
 </div>
       </div>
       <footer id="colophon" role="contentinfo">
-    <p>&copy; 2019 John Doe
+    <p>&copy; 2019 Dxes
     All rights reserved.</p>
     <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
 </footer>
