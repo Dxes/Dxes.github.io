@@ -10,6 +10,8 @@
 
     <!--Description-->
     
+        <meta name="description" content="git常用指令1.基本指令git init &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; ——  新建git仓库git add 文件/文件夹 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; ——  将文件添加到缓存区中git add -A &amp;nbsp;&amp;nbsp;&amp;nb">
+    
 
     <!--Author-->
     
@@ -18,7 +20,7 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="Hexo"/>
+        <meta property="og:title" content="git常用指令"/>
     
 
     <!--Open Graph Description-->
@@ -29,7 +31,7 @@
 
     <!--Type page-->
     
-        <meta property="og:type" content="website" />
+        <meta property="og:type" content="article" />
     
 
     <!--Page Cover-->
@@ -43,7 +45,7 @@
 
     <!-- Title -->
     
-    <title>Archives - Hexo</title>
+    <title>git常用指令 - Hexo</title>
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
@@ -132,9 +134,7 @@
 <div class="container">
 
     <!-- Main Content -->
-    
-
-<div class="row">
+    <div class="row">
     <div class="col-sm-12">
 
         <!--Title and Logo-->
@@ -142,97 +142,65 @@
     <div class="logo">
         <a href="/"><i class="logo-icon fa fa-cube" aria-hidden="true"></i></a>
         
-            <h1 id="main-title" class="title">Archives</h1>
-        
     </div>
 </header>
 
-        <section class="main archive-container">
+        <section class="main">
             
-                <div class="archive-post">
-    <a href="/2019/12/20/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/">
-        <span class="archive-date">
-            Dec 2019
-        </span>
-        我的第一篇博客文章
-    </a>
+<div class="post">
+
+    <div class="post-header">
+        <h1 class="title">
+            <a href="/2019/12/21/git%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/">
+                git常用指令
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2019-12-21</span>
+            
+            
+            
+        </div>
+    </div>
+
+    <div class="content">
+
+        <!-- Gallery -->
+        
+
+        <!-- Post Content -->
+        <h1 id="git常用指令"><a href="#git常用指令" class="headerlink" title="git常用指令"></a>git常用指令</h1><h2 id="1-基本指令"><a href="#1-基本指令" class="headerlink" title="1.基本指令"></a>1.基本指令</h2><p><code>git init</code> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ——  新建git仓库<br><code>git add 文件/文件夹</code> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ——  将文件添加到缓存区中<br><code>git add -A</code> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; — 添加所有内容到缓存区中<br><code>git status</code> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;———    查看git状态<br><code>git commit -m  ‘提交信息’</code>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;——  将缓存区中的内容全部提交到git本地仓库中  </p>
+<p><code>git log</code>   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;——-    查看提交日志  </p>
+<p><code>git reset  -- hard   HEAD</code>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;——   让工作目录中的内容和仓库中的内容保持一致<br><code>git reset  --hard HEAD^</code>   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;——  回到上一个版本<br><code>git  reset  -- hard 版本号</code>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;——  回到指定的版本  </p>
+<p><code>git checkout  文件名</code>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ——  从暂存区中恢复工作目录中的内容(让工作区中的指定文件，回到上次提交的时候的状态)  </p>
+<p><code>git clone &lt;url&gt;</code> - 将服务器上的项目(仓库)克隆 (使用https地址需要输入密码，使用ssh地址需要添加公钥)  </p>
+<p><code>git remote add origin 地址</code>      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;—– 关联远程仓库(只需要关联一次)</p>
+<p><code>git push [-u] origin master</code>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;—– 提交(-u在第一次提交分支的时候才用)  </p>
+<p><code>git push</code>         —  将本地仓库的内容提交到远程仓库master分支上</p>
+<p><code>git push origin 分支名</code>       —  将本地仓库的内容提交到远程仓库对应的分支上, 如果分支不存在会自动创建</p>
+<p><code>git pull</code>          —  将远程仓库中的内容更新到本地仓库和工作区中</p>
+<h2 id="2-分之管理"><a href="#2-分之管理" class="headerlink" title="2.分之管理"></a>2.分之管理</h2><p>创建仓库会默认给我们创建一个master分之,这个分之一般作为提交和发布分之;开发一般会自己创建一个develop分之，用来开发和测试;多人协作的时候还可能根据不同的人或者(不同的功能)创建不同的分之，用来独立开发  </p>
+<p>常见分之： master(主要是合并develop), develop(主要合并下面的其他分支), 功能/人员分之(开发)  </p>
+<p><code>git branch [-a]</code>   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        - 查看分之<br><code>git branch 分之名</code>        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- 创建分之<br><code>git checkout   分支名</code>        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-   切换分之<br><code>git checkout -b 分之名</code>        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    - 切换并创建新的分之<br><code>git diff    分之1  分之2</code>        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- 查看两个分之之间的差异<br><code>git merge 分之名</code>            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- 让当前分之和指定分之进行合并     </p>
+<p>注意: 切换分之、push、pull，这些操作前要保证工作区是clean  </p>
+<p>怎么避免冲突：  不要发生多个分之对同一个文件在同一个版本下进行修改(和同伴确认和商量)</p>
+
+    </div>
+
+    
+
+    
+
+    <!-- Comments -->
+    
+
 </div>
-            
-                <div class="archive-post">
-    <a href="/2019/12/20/hello-world/">
-        <span class="archive-date">
-            Dec 2019
-        </span>
-        Hello World
-    </a>
-</div>
-            
-                <div class="archive-post">
-    <a href="/2019/12/21/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">
-        <span class="archive-date">
-            Dec 2019
-        </span>
-        Hexo博客搭建
-    </a>
-</div>
-            
-                <div class="archive-post">
-    <a href="/2019/12/21/1.%E6%97%A5%E5%B8%B8%E6%8C%87%E4%BB%A4%20/">
-        <span class="archive-date">
-            Dec 2019
-        </span>
-        1.日常指令 
-    </a>
-</div>
-            
-                <div class="archive-post">
-    <a href="/2019/12/21/Linux%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1/">
-        <span class="archive-date">
-            Dec 2019
-        </span>
-        Linux定时任务
-    </a>
-</div>
-            
-                <div class="archive-post">
-    <a href="/2019/12/21/shell%E7%BC%96%E7%A8%8B/">
-        <span class="archive-date">
-            Dec 2019
-        </span>
-        shell编程
-    </a>
-</div>
-            
-                <div class="archive-post">
-    <a href="/2019/12/21/vim%E7%9A%84%E4%BD%BF%E7%94%A8/">
-        <span class="archive-date">
-            Dec 2019
-        </span>
-        vim的使用
-    </a>
-</div>
-            
-                <div class="archive-post">
-    <a href="/2019/12/21/CentOS%207.x%E5%8F%8A%E4%BB%A5%E4%B8%8Amysql%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE/">
-        <span class="archive-date">
-            Dec 2019
-        </span>
-        CentOS 7.x及以上mysql安装和配置
-    </a>
-</div>
-            
-                <div class="archive-post">
-    <a href="/2019/12/21/git%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/">
-        <span class="archive-date">
-            Dec 2019
-        </span>
-        git常用指令
-    </a>
-</div>
-            
         </section>
+
     </div>
 </div>
+
 
 </div>
 

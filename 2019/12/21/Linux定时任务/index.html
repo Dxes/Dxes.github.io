@@ -10,6 +10,9 @@
 
     <!--Description-->
     
+        <meta name="description" content="Linux定时任务通过制定 ```crontab -e``编辑和开启定时任务
+1234567891011121314151617181920212223242526# 创建一个完整的定时任务，需要确定时间和任务# 1.时间 .---------------- minute (0 - 59)   # ">
+    
 
     <!--Author-->
     
@@ -18,7 +21,7 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="Hexo"/>
+        <meta property="og:title" content="Linux定时任务"/>
     
 
     <!--Open Graph Description-->
@@ -29,7 +32,7 @@
 
     <!--Type page-->
     
-        <meta property="og:type" content="website" />
+        <meta property="og:type" content="article" />
     
 
     <!--Page Cover-->
@@ -43,7 +46,7 @@
 
     <!-- Title -->
     
-    <title>Archives - Hexo</title>
+    <title>Linux定时任务 - Hexo</title>
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
@@ -132,9 +135,7 @@
 <div class="container">
 
     <!-- Main Content -->
-    
-
-<div class="row">
+    <div class="row">
     <div class="col-sm-12">
 
         <!--Title and Logo-->
@@ -142,97 +143,53 @@
     <div class="logo">
         <a href="/"><i class="logo-icon fa fa-cube" aria-hidden="true"></i></a>
         
-            <h1 id="main-title" class="title">Archives</h1>
-        
     </div>
 </header>
 
-        <section class="main archive-container">
+        <section class="main">
             
-                <div class="archive-post">
-    <a href="/2019/12/20/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/">
-        <span class="archive-date">
-            Dec 2019
-        </span>
-        我的第一篇博客文章
-    </a>
+<div class="post">
+
+    <div class="post-header">
+        <h1 class="title">
+            <a href="/2019/12/21/Linux%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1/">
+                Linux定时任务
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2019-12-21</span>
+            
+            
+            
+        </div>
+    </div>
+
+    <div class="content">
+
+        <!-- Gallery -->
+        
+
+        <!-- Post Content -->
+        <h1 id="Linux定时任务"><a href="#Linux定时任务" class="headerlink" title="Linux定时任务"></a>Linux定时任务</h1><p>通过制定 ```crontab -e``编辑和开启定时任务</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 创建一个完整的定时任务，需要确定时间和任务</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 1.时间</span></span><br><span class="line"> .---------------- minute (0 - 59)   # 分</span><br><span class="line"> |  .------------- hour (0 - 23)     # 时</span><br><span class="line"> |  |  .---------- day of month (1 - 31)  # 日</span><br><span class="line"> |  |  |  .------- month (1 - 12) OR jan,feb,mar,apr ...  # 月</span><br><span class="line"> |  |  |  |  .---- day of week (0 - 6) (Sunday=0 or 7) OR sun,mon,tue,wed,thu,fri,sat</span><br><span class="line"> |  |  |  |  |</span><br><span class="line"> *  *  *  *  * user-name  command to be executed</span><br><span class="line"> </span><br><span class="line"> * * * * *   		- 每分钟执行一次任务(每隔一分钟)</span><br><span class="line"> */1 * * * *        - 每分钟执行一次任务(每隔一分钟)</span><br><span class="line"> */2 * * * *        - 每2分钟执行一次任务(每隔2分钟)</span><br><span class="line"> * */1 * * *        - 每隔1小时</span><br><span class="line"> * * */1 * *        - 每隔1天</span><br><span class="line"> * * * */2 *        - 每隔两个月</span><br><span class="line"> * * * *  fri       - 每周五执行任务</span><br><span class="line"> </span><br><span class="line"> 30 * * * *         - 时间点到30分的时候做</span><br><span class="line"> 0  * * * *         - 时间点到整点的时候执行任务</span><br><span class="line"> 30 2 * * *         - 时间到 02:30 的时候执行任务</span><br><span class="line"> 0  12 28 * *       - 每月28号12:00执行任务</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="meta">#</span><span class="bash"> 2.任务</span></span><br><span class="line">写Linux指令, 指令如果有结果，结果看不到</span><br></pre></td></tr></table></figure>
+
+
+    </div>
+
+    
+
+    
+
+    <!-- Comments -->
+    
+
 </div>
-            
-                <div class="archive-post">
-    <a href="/2019/12/20/hello-world/">
-        <span class="archive-date">
-            Dec 2019
-        </span>
-        Hello World
-    </a>
-</div>
-            
-                <div class="archive-post">
-    <a href="/2019/12/21/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">
-        <span class="archive-date">
-            Dec 2019
-        </span>
-        Hexo博客搭建
-    </a>
-</div>
-            
-                <div class="archive-post">
-    <a href="/2019/12/21/1.%E6%97%A5%E5%B8%B8%E6%8C%87%E4%BB%A4%20/">
-        <span class="archive-date">
-            Dec 2019
-        </span>
-        1.日常指令 
-    </a>
-</div>
-            
-                <div class="archive-post">
-    <a href="/2019/12/21/Linux%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1/">
-        <span class="archive-date">
-            Dec 2019
-        </span>
-        Linux定时任务
-    </a>
-</div>
-            
-                <div class="archive-post">
-    <a href="/2019/12/21/shell%E7%BC%96%E7%A8%8B/">
-        <span class="archive-date">
-            Dec 2019
-        </span>
-        shell编程
-    </a>
-</div>
-            
-                <div class="archive-post">
-    <a href="/2019/12/21/vim%E7%9A%84%E4%BD%BF%E7%94%A8/">
-        <span class="archive-date">
-            Dec 2019
-        </span>
-        vim的使用
-    </a>
-</div>
-            
-                <div class="archive-post">
-    <a href="/2019/12/21/CentOS%207.x%E5%8F%8A%E4%BB%A5%E4%B8%8Amysql%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE/">
-        <span class="archive-date">
-            Dec 2019
-        </span>
-        CentOS 7.x及以上mysql安装和配置
-    </a>
-</div>
-            
-                <div class="archive-post">
-    <a href="/2019/12/21/git%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/">
-        <span class="archive-date">
-            Dec 2019
-        </span>
-        git常用指令
-    </a>
-</div>
-            
         </section>
+
     </div>
 </div>
+
 
 </div>
 

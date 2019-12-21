@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="CentOS 7.x及以上mysql安装和配置在安装MySQL之前需要先将服务器的3306端口打开
+
+下载MySQL源安装包:  wget http://dev.mysql.com/get/mysql57-community-release-el7-8.noarch.rpm  
+
+安装MySQL源:">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="John Doe">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="CentOS 7.x及以上mysql安装和配置"/>
+    
+
+    <!--Open Graph Description-->
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="Hexo"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+    
+        <meta name="twitter:card" content="summary" />
+    
+    
+    
+
+    <!-- Title -->
+    
+    <title>CentOS 7.x及以上mysql安装和配置 - Hexo</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    <!-- Google Analytics -->
+    
+
+
+<meta name="generator" content="Hexo 4.1.1"></head>
+
+
+<body>
+
+<div class="bg-gradient"></div>
+<div class="bg-pattern"></div>
+
+<!-- Menu -->
+<!--Menu Links and Overlay-->
+<div class="menu-bg">
+    <div class="menu-container">
+        <ul>
+            
+            <li class="menu-item">
+                <a href="/">
+                    Home
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/archives">
+                    Archives
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/about.html">
+                    About
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/tags">
+                    Tags
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/categories">
+                    Categories
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/contact.html">
+                    Contact
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+<!--Hamburger Icon-->
+<nav>
+    <a href="#menu"></a>
+</nav>
+
+<div class="container">
+
+    <!-- Main Content -->
+    <div class="row">
+    <div class="col-sm-12">
+
+        <!--Title and Logo-->
+        <header>
+    <div class="logo">
+        <a href="/"><i class="logo-icon fa fa-cube" aria-hidden="true"></i></a>
+        
+    </div>
+</header>
+
+        <section class="main">
+            
+<div class="post">
+
+    <div class="post-header">
+        <h1 class="title">
+            <a href="/2019/12/21/CentOS%207.x%E5%8F%8A%E4%BB%A5%E4%B8%8Amysql%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE/">
+                CentOS 7.x及以上mysql安装和配置
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2019-12-21</span>
+            
+            
+            
+        </div>
+    </div>
+
+    <div class="content">
+
+        <!-- Gallery -->
+        
+
+        <!-- Post Content -->
+        <h1 id="CentOS-7-x及以上mysql安装和配置"><a href="#CentOS-7-x及以上mysql安装和配置" class="headerlink" title="CentOS 7.x及以上mysql安装和配置"></a>CentOS 7.x及以上mysql安装和配置</h1><p>在安装MySQL之前需要先将服务器的3306端口打开</p>
+<ol>
+<li><p>下载MySQL源安装包:  <font style='color:green;'>wget <a href="http://dev.mysql.com/get/mysql57-community-release-el7-8.noarch.rpm" target="_blank" rel="noopener">http://dev.mysql.com/get/mysql57-community-release-el7-8.noarch.rpm</a> </font> </p>
+</li>
+<li><p>安装MySQL源:  <font style='color:green'>yum localinstall mysql57-community-release-el7-8.noarch.rpm</font></p>
+</li>
+<li><p>安装MySQL: <font style='color:green'>yum install mysql-community-server</font></p>
+</li>
+</ol>
+<ol start="4">
+<li><p>设置开机启动MySQL服务：<font style='color:green'>systemctl enable mysqld </font></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> CentOS7.x以上的版本，程序控制指令</span></span><br><span class="line">systemctl enable 程序名     -  开机自启动程序/服务</span><br><span class="line">systemctl start  程序名     -  启动程序/服务</span><br><span class="line">systemctl stop   程序名     -  关闭程序/服务</span><br><span class="line">systemctl restart  程序名   -  重启程序/服务</span><br><span class="line">systemctl disable  程序名   -  禁用程序/服务</span><br><span class="line">注意: 这儿的程序名一般需要在你安装的程序的原名的基础上加d</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> CentOS7.x一下的版本，不能用systemctl来控制，需要直接使用mysql去调用相关指令(因为一般不会向低版本发展，所以可以不用管，如果需要可以查资料，网上很多)</span></span><br></pre></td></tr></table></figure>
+
+
+</li>
+</ol>
+<ol start="5">
+<li>启动MySQL服务<font style='color:green'>systemctl start mysqld  </font></li>
+</ol>
+<ol start="6">
+<li><p>设置MySQL登录密码</p>
+<p>这个过程比较麻烦，请严格按照以下步骤完成！</p>
+<p>第一步: 执行<font style='color:green'>systemctl stop mysqld</font>  关闭mysql服务</p>
+<p>第二步: 使用vim打开mysql配置文件 ‘\etc\my.cnf’,并且在末尾添加两行代码然后保存退出</p>
+<p>​          <font style='color:green'>验证密码强度：validate_password=off</font></p>
+<p>​          <font style='color:green'>跳过密码验证：skip-grant-tables</font></p>
+<p><img src="/Users/yuting/Workspace/JAVA/%E6%8E%88%E8%AF%BE/%E6%96%87%E6%A1%A3/Linux%E9%98%B6%E6%AE%B5%E6%96%87%E6%A1%A3/img/mysql1.png" alt=""></p>
+</li>
+</ol>
+<p>   第三步：执行 <font style='color:green'>systemctl start mysqld</font> 开启mysql服务</p>
+<p>   第四步：在shell中执行 <font style='color:green'>mysql -u root -p</font> 设置密码（注意密码设置好以后要记住），并且按以下提示输入内容</p>
+   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">[root ~]# mysql -u root -p   (需要输入的指令)</span><br><span class="line">Enter password:   (这个地方自己设置密码，输入的时候不会有显示提示)</span><br><span class="line">Welcome to the MySQL monitor.  Commands end with ; or \g.</span><br><span class="line">Your MySQL connection id is 10</span><br><span class="line">Server version: 5.7.28 MySQL Community Server (GPL)</span><br><span class="line"></span><br><span class="line">Copyright (c) 2000, 2019, Oracle and&#x2F;or its affiliates. All rights reserved.</span><br><span class="line"></span><br><span class="line">Oracle is a registered trademark of Oracle Corporation and&#x2F;or its</span><br><span class="line">affiliates. Other names may be trademarks of their respective</span><br><span class="line">owners.</span><br><span class="line"></span><br><span class="line">Type &#39;help;&#39; or &#39;\h&#39; for help. Type &#39;\c&#39; to clear the current input statement.</span><br><span class="line"></span><br><span class="line">mysql&gt; update mysql.user set authentication_string&#x3D;password(&quot;yuting123456&quot;) where user&#x3D;&quot;root&quot;;    (设置连接密码，将yuting123456设置为自己的密码就行，最好和上面的密码保持一致，否则容易混乱)</span><br><span class="line">Query OK, 1 row affected, 1 warning (0.00 sec)</span><br><span class="line">Rows matched: 1  Changed: 1  Warnings: 1</span><br><span class="line"></span><br><span class="line">mysql&gt; flush privileges;     (刷新权限)</span><br><span class="line">Query OK, 0 rows affected (0.00 sec)</span><br><span class="line"></span><br><span class="line">mysql&gt; quit;   (退出mysql指令模式)</span><br><span class="line">Bye</span><br></pre></td></tr></table></figure>
+
+<p>   第五步：执行<font style='color:green'>systemctl stop mysqld</font> 关闭mysql服务，然后重新打开mysql配置文件，注释或者删除之前添加的 <font style='color:green'>skip-grant-tables</font> ，保存退出后再执行 <font style='color:green'>systemctl start mysqld</font> 开启mysql服务</p>
+<p>   <img src="./img/mysql2.png" alt=""></p>
+   <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 这个过程比较麻烦，请严格按照以下步骤完成！</span></span><br><span class="line">第一步: 执行 'systemctl stop mysqld' 关闭mysql服务</span><br><span class="line">第二步: 使用vim打开mysql配置文件 '\etc\my.cnf',并且在末尾添加两行代码(注意：只需要复制引号中的内容)然	   后保存退出：</span><br><span class="line">		'validate_password=off   #关闭mysql密码强度验证'</span><br><span class="line">		'skip-grant-tables    #跳过密码验证'</span><br><span class="line">		</span><br><span class="line">第三步：执行 'systemctl start mysqld' 开启mysql服务</span><br><span class="line">第四步：在shell中执行以'mysql -u root -p'设置密码(注意：密码设置好以后要记住)</span><br></pre></td></tr></table></figure>
+
+
+
+<ol start="7">
+<li><p>设置mysql能够远程访问</p>
+<p>执行<font style='color:green'>mysql -u root -p</font> 登录mysql添加远程连接权限。登录的密码就是之前设置的密码</p>
+   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">[root ~]# mysql -u root -p   (需要输入的指令)</span><br><span class="line">Enter password:     (输入密码)</span><br><span class="line">Welcome to the MySQL monitor.  Commands end with ; or \g.</span><br><span class="line">Your MySQL connection id is 6</span><br><span class="line">Server version: 5.7.28 MySQL Community Server (GPL)</span><br><span class="line"></span><br><span class="line">Copyright (c) 2000, 2019, Oracle and&#x2F;or its affiliates. All rights reserved.</span><br><span class="line"></span><br><span class="line">Oracle is a registered trademark of Oracle Corporation and&#x2F;or its</span><br><span class="line">affiliates. Other names may be trademarks of their respective</span><br><span class="line">owners.</span><br><span class="line"></span><br><span class="line">Type &#39;help;&#39; or &#39;\h&#39; for help. Type &#39;\c&#39; to clear the current input statement.</span><br><span class="line"></span><br><span class="line">mysql&gt; grant all privileges on *.* to &#39;root&#39;@&#39;%&#39; identified by &#39;yuting123456&#39; with grant option;     (让所有的ip地址的设备都可以通过root账号并且密码是yuting123456进行连接；这个地方可以将%换成指定的某一个ip地址，%表示所有的ip)</span><br><span class="line">Query OK, 0 rows affected, 1 warning (0.00 sec)</span><br><span class="line"></span><br><span class="line">mysql&gt; flush privileges;  (刷新权限)</span><br><span class="line">Query OK, 0 rows affected (0.00 sec)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>终于结束啦！！！</p>
+</li>
+</ol>
+
+    </div>
+
+    
+
+    
+
+    <!-- Comments -->
+    
+
+</div>
+        </section>
+
+    </div>
+</div>
+
+
+</div>
+
+<!-- Footer -->
+<div class="push"></div>
+
+<footer class="footer-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 footer-about">
+                <h2>About</h2>
+                <p>
+                    This theme was developed by <a href="https://github.com/klugjo" target="_blank" rel="noopener">Jonathan Klughertz</a>. The source code is available on Github. Create Websites. Make Magic.
+                </p>
+            </div>
+            
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 recent-posts">
+        <h2>Recent Posts</h2>
+        <ul>
+            
+            <li>
+                <a class="footer-post" href="/2019/12/21/1.%E6%97%A5%E5%B8%B8%E6%8C%87%E4%BB%A4%20/">1.日常指令 </a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2019/12/21/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">Hexo博客搭建</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2019/12/21/CentOS%207.x%E5%8F%8A%E4%BB%A5%E4%B8%8Amysql%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE/">CentOS 7.x及以上mysql安装和配置</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2019/12/21/Linux%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1/">Linux定时任务</a>
+            </li>
+            
+        </ul>
+    </div>
+
+
+
+            
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <ul class="list-inline footer-social-icons">
+                    
+                    <li class="list-inline-item">
+                        <a href="https://github.com/klugjo/hexo-theme-alpha-dust" target="_blank" rel="noopener">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-github"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://twitter.com/?lang=en" target="_blank" rel="noopener">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-twitter"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://www.facebook.com/" target="_blank" rel="noopener">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-facebook"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://www.instagram.com/" target="_blank" rel="noopener">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-instagram"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://dribbble.com/" target="_blank" rel="noopener">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-dribbble"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://plus.google.com/" target="_blank" rel="noopener">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-google-plus"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://www.behance.net/" target="_blank" rel="noopener">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-behance"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://500px.com/" target="_blank" rel="noopener">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-500px"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="mailto:test@example.com">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-envelope-o"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="\#">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-rss"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="footer-copyright">
+                    @Untitled. All right reserved | Design & Hexo <a href="http://www.codeblocq.com/" target="_blank" rel="noopener">Jonathan Klughertz</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- After footer scripts -->
+
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Tween Max -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Custom JavaScript -->
+
+<script src="/js/main.js"></script>
+
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

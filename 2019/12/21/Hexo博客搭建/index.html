@@ -10,6 +10,15 @@
 
     <!--Description-->
     
+        <meta name="description" content="Hexo博客搭建   
+###1. 搭建博客使用hexo搭建个人博客前需要先在自己的电脑上装好git和node.js   
+
+首先在自己的电脑上创建一个空的文件夹’Hexo’  
+
+在gitbash中终端中通过cd指令进入到刚才创建的文件夹中   
+
+输入指令 npm install -g hexo">
+    
 
     <!--Author-->
     
@@ -18,7 +27,7 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="Hexo"/>
+        <meta property="og:title" content="Hexo博客搭建"/>
     
 
     <!--Open Graph Description-->
@@ -29,7 +38,7 @@
 
     <!--Type page-->
     
-        <meta property="og:type" content="website" />
+        <meta property="og:type" content="article" />
     
 
     <!--Page Cover-->
@@ -43,7 +52,7 @@
 
     <!-- Title -->
     
-    <title>Archives - Hexo</title>
+    <title>Hexo博客搭建 - Hexo</title>
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
@@ -132,9 +141,7 @@
 <div class="container">
 
     <!-- Main Content -->
-    
-
-<div class="row">
+    <div class="row">
     <div class="col-sm-12">
 
         <!--Title and Logo-->
@@ -142,97 +149,72 @@
     <div class="logo">
         <a href="/"><i class="logo-icon fa fa-cube" aria-hidden="true"></i></a>
         
-            <h1 id="main-title" class="title">Archives</h1>
-        
     </div>
 </header>
 
-        <section class="main archive-container">
+        <section class="main">
             
-                <div class="archive-post">
-    <a href="/2019/12/20/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/">
-        <span class="archive-date">
-            Dec 2019
-        </span>
-        我的第一篇博客文章
-    </a>
+<div class="post">
+
+    <div class="post-header">
+        <h1 class="title">
+            <a href="/2019/12/21/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">
+                Hexo博客搭建
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2019-12-21</span>
+            
+            
+            
+        </div>
+    </div>
+
+    <div class="content">
+
+        <!-- Gallery -->
+        
+
+        <!-- Post Content -->
+        <p>Hexo博客搭建   </p>
+<p>###1. 搭建博客<br>使用hexo搭建个人博客前需要先在自己的电脑上装好git和node.js   </p>
+<ol>
+<li><p>首先在自己的电脑上创建一个空的文件夹’Hexo’  </p>
+</li>
+<li><p>在gitbash中终端中通过<code>cd</code>指令进入到刚才创建的文件夹中   </p>
+</li>
+<li><p>输入指令 <code>npm install -g hexo</code> 安装Hexo  </p>
+</li>
+<li><p>输入指令 <code>hexo init</code> 进行初始化  </p>
+</li>
+<li><p>依次输入指令<code>npm install</code> <code>hexo server</code> 启动服务器<br>博客内容发生改变后可以通过<code>hexo clean</code> <code>hexo generate</code> <code>hexo deploy</code> <code>hexo server</code>刷新后重新启动<br>###2. 部署博客  </p>
+</li>
+<li><p>在github上创建一个空的仓库，仓库名： <code>用户名.github.io</code>  </p>
+</li>
+<li><p>修改博客本地仓库中的配置文件（Hexo目录下的_config.yml文件）,在文件末尾添加一下选中内容<br><img src="/Users/yuting/Desktop/Files/Hexo/image1.png" alt="">  </p>
+</li>
+<li><p>使用git部署, 输入指令<code>npm install hexo-deployer-git --save</code>  </p>
+</li>
+<li><p>输入指令<code>hexo clean</code> <code>hexo generate</code> <code>hexo deploy</code> 对博客进行提交</p>
+</li>
+</ol>
+
+    </div>
+
+    
+
+    
+
+    <!-- Comments -->
+    
+
 </div>
-            
-                <div class="archive-post">
-    <a href="/2019/12/20/hello-world/">
-        <span class="archive-date">
-            Dec 2019
-        </span>
-        Hello World
-    </a>
-</div>
-            
-                <div class="archive-post">
-    <a href="/2019/12/21/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">
-        <span class="archive-date">
-            Dec 2019
-        </span>
-        Hexo博客搭建
-    </a>
-</div>
-            
-                <div class="archive-post">
-    <a href="/2019/12/21/1.%E6%97%A5%E5%B8%B8%E6%8C%87%E4%BB%A4%20/">
-        <span class="archive-date">
-            Dec 2019
-        </span>
-        1.日常指令 
-    </a>
-</div>
-            
-                <div class="archive-post">
-    <a href="/2019/12/21/Linux%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1/">
-        <span class="archive-date">
-            Dec 2019
-        </span>
-        Linux定时任务
-    </a>
-</div>
-            
-                <div class="archive-post">
-    <a href="/2019/12/21/shell%E7%BC%96%E7%A8%8B/">
-        <span class="archive-date">
-            Dec 2019
-        </span>
-        shell编程
-    </a>
-</div>
-            
-                <div class="archive-post">
-    <a href="/2019/12/21/vim%E7%9A%84%E4%BD%BF%E7%94%A8/">
-        <span class="archive-date">
-            Dec 2019
-        </span>
-        vim的使用
-    </a>
-</div>
-            
-                <div class="archive-post">
-    <a href="/2019/12/21/CentOS%207.x%E5%8F%8A%E4%BB%A5%E4%B8%8Amysql%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE/">
-        <span class="archive-date">
-            Dec 2019
-        </span>
-        CentOS 7.x及以上mysql安装和配置
-    </a>
-</div>
-            
-                <div class="archive-post">
-    <a href="/2019/12/21/git%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/">
-        <span class="archive-date">
-            Dec 2019
-        </span>
-        git常用指令
-    </a>
-</div>
-            
         </section>
+
     </div>
 </div>
+
 
 </div>
 
